@@ -1,0 +1,699 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  background: #f1f5f9;
+  color: #172033;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+  background: #0f172a;
+  color: white;
+  padding: 24px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: 0.3px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-right small {
+  color: #cbd5e1;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+  background: #123b2a;
+  color: #86efac;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #1f5a3e;
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.logout-button {
+  border: 1px solid #475569;
+  background: transparent;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.logout-button:hover {
+  background: #1e293b;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 32px 42px 50px;
+}
+
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 650;
+}
+
+.number {
+  margin: 10px 0 0;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.moderate {
+  color: #d97706;
+}
+
+.low {
+  color: #16a34a;
+}
+
+
+/* =====================================================
+   PANELS
+===================================================== */
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.panel h3 {
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+   RISK BADGES
+===================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.badge.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.moderate {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.badge.low {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+
+/* =====================================================
+   ANALYSIS HEADER
+===================================================== */
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.analysis-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+}
+
+
+/* =====================================================
+   PERSONNEL SELECTOR
+===================================================== */
+
+.personnel-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.personnel-selector select,
+.wellness-form select,
+.wellness-form input {
+  border: 1px solid #cbd5e1;
+  background: white;
+  padding: 10px 12px;
+  border-radius: 9px;
+  outline: none;
+}
+
+.personnel-selector select:focus,
+.wellness-form select:focus,
+.wellness-form input:focus {
+  border-color: #64748b;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.analysis-button {
+  border: none;
+  background: #0f172a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.analysis-button:hover {
+  background: #1e293b;
+}
+
+
+/* =====================================================
+   ANALYSIS GRID
+===================================================== */
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1.25fr;
+  gap: 18px;
+}
+
+.analysis-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.analysis-card h3 {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   LARGE RISK
+===================================================== */
+
+.risk-large {
+  font-size: 30px;
+  font-weight: 850;
+  margin-top: 12px;
+}
+
+.risk-large.high {
+  color: #dc2626;
+}
+
+.risk-large.moderate {
+  color: #d97706;
+}
+
+.risk-large.low {
+  color: #16a34a;
+}
+
+.risk-score {
+  font-size: 34px;
+  font-weight: 850;
+  margin: 10px 0;
+}
+
+.risk-note {
+  color: #64748b;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FACTORS
+===================================================== */
+
+.factor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.factor {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.factor strong {
+  display: block;
+  font-size: 13px;
+}
+
+.factor small {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+}
+
+.factor-up {
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: right;
+}
+
+.factor-down {
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: right;
+}
+
+
+/* =====================================================
+   RECOMMENDATIONS
+===================================================== */
+
+.analysis-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.analysis-card li {
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+
+/* =====================================================
+   WELLNESS / TREND CARD
+===================================================== */
+
+.trend-card {
+  margin-top: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.trend-card h3 {
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   WELLNESS METRICS
+===================================================== */
+
+.trend-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.trend-summary > div {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 14px;
+}
+
+.trend-summary span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.trend-summary strong {
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   CHART
+===================================================== */
+
+.chart-container {
+  width: 100%;
+  height: 320px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+
+/* =====================================================
+   TREND STATUS
+===================================================== */
+
+.trend-status {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  color: #475569;
+}
+
+.trend-status strong {
+  color: #0f172a;
+}
+
+
+/* =====================================================
+   WELLNESS FORM
+===================================================== */
+
+.form-description {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.wellness-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  align-items: end;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+}
+
+.checkin-message {
+  margin-top: 15px;
+  font-weight: 650;
+  color: #15803d;
+}
+
+
+/* =====================================================
+   EMPTY / ERROR
+===================================================== */
+
+.empty-analysis {
+  padding: 26px;
+  background: #f8fafc;
+  border-radius: 12px;
+  color: #64748b;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   DISCLAIMER
+===================================================== */
+
+.disclaimer {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  color: #9a3412;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.login-subtitle {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.login-card h2 {
+  margin-top: 30px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-card label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.login-card select {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wellness-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trend-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 22px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .personnel-selector {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wellness-form {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .factor {
+    flex-direction: column;
+  }
+
+}
